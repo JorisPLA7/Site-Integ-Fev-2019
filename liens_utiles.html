@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liens utiles</title>
+    <link rel="stylesheet" type="text/css" href="./Style/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./Style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./Style/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<script src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/charts/node_modules/chart.js/dist/Chart.js"></script>
+	<!-- Gestion du scroll avec la scroll bar -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $(document).on("scroll", onScroll);
+		    
+		    //smoothscroll
+		    $('a[href^="#"]').on('click', function (e) {
+		        e.preventDefault();
+		        $(document).off("scroll");
+		        
+		        $('a').each(function () {
+		            $(this).removeClass('active');
+		        })
+		        $(this).addClass('active');
+		      
+		        var target = this.hash,
+		            menu = target;
+		        $target = $(target);
+		        $('html, body').stop().animate({
+		            'scrollTop': $target.offset().top+2
+		        }, 500, 'swing', function () {
+		            window.location.hash = target;
+		            $(document).on("scroll", onScroll);
+		        });
+		    });
+		});
+
+		function onScroll(event){
+		    var scrollPos = $(document).scrollTop();
+		    $('#navigation a').each(function () {
+		        var currLink = $(this);
+		        var refElement = $(currLink.attr("href"));
+		        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+		            $('#menu-center ul li a').removeClass("active");
+		            currLink.addClass("active");
+		        }
+		        else{
+		            currLink.removeClass("active");
+		        }
+		    });
+		}
+	</script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark" id="navigation">
+		<li class="active">
+			<img src="./Images/logo.png" title="AH BOOOOOOON ?" id="navbar-logo">
+		</li>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+			<a class="nav-link" href="index.php#logo">Accueil<span class="sr-only"></span></a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="index.php#news-container">News</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.php#clans">Clans</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.php#map">Carte</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.php#planning">Planning</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.php#upload-defi">Envoyer un défi</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.php#score">Scores des clans</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="liens_utiles.html">Liens utiles</a>
+			</li>
+		</ul>
+		</div>
+    </nav>
+    <div class="m-5 pt-5">
+        <h1 class="GrecAncien">Liens Utiles</h1>
+        <p>
+            Coucou mon beau TC01 tout perdu.<br> 
+            Quand tu vas arriver tu auras besoin de te connecter au réseau de l'UTC, d'installer des logiciels et pleins de petites choses comme ça.<br>
+            Pour que tu sois moins perdu, on t'a préparé un mini catalogue de liens et une rapide explication sur le 5000 etu et le SIMDE.
+        </p>
+        <h2 class="GrecAncien">Le 5000 etu</h2>
+        <p>
+            C'est un ou plusieurs étudiants qui sont là pour t'aider si tu as des problèmes informatiques avec ce qui ne concerne pas les assos. <br>
+            Tu peux les joindre sur leur page Facebook en suivant ce lien: <a href="https://www.facebook.com/5000etu/">Coucou, je suis un lien.</a> <br>
+            PS: Aime la page, tu seras au courant des derniers changements.
+        </p>
+        <h2 class="GrecAncien">Le SIMDE</h2>
+        <p>
+            C'est un groupe d'étudiants qui gère l'informatique du BDE. Tu peux signaler un problème, faire une demande en suivant ce lien : <a href="https://simde.on.spiceworks.com/portal/tickets">Je suis aussi un lien.</a><br>
+            Tu peux aussi les rejoindre sans connaissances pour apprendre et donner un coup de main!
+        </p>
+        <h2 class="GrecAncien">Le tant attendu mini catalogue</h2>
+        <ul>
+            <li>
+                <a href="https://5000.utc.fr/front/knowbaseitem.form.php?id=53">Se connecter à utcetu</a>
+            </li>
+            <li>
+                <a href="https://5000.utc.fr/front/knowbaseitem.form.php?id=38">Installer le VPN</a>
+            </li>
+            <li>
+                <a href="https://download.utc.fr/">Plateforme de téléchargement de logiciels de l'UTC</a>
+            </li>
+            <li>
+                <a href="https://5000.utc.fr/front/knowbaseitem.php">Toutes les autres procédures</a>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>
