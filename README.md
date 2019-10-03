@@ -1,3 +1,7 @@
+# WIP
+
+## copie pas encore maintnenue, un peu de patience ... ;)
+
 Lis tout car c'est cool (on est bien bien bien ici).
 
 Ce site est le site de l'association "IntegFev" de l'Université de Technologie de Compiègne.
